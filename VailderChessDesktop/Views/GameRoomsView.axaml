@@ -1,0 +1,94 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="VailderChessDesktop.Views.GameRoomsView">
+    <ScrollViewer>
+         <DataGrid
+                Items="{Binding Rooms}"
+                AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        IsReadOnly="True"
+                        Binding="{Binding RoomPacket.Name}">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRRoom}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        IsReadOnly="True"
+                        Binding="{Binding RoomPacket.OwnerName}">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRCreator}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        IsReadOnly="True"
+                        Binding="{Binding RoomPacket.RivalName}">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRRival}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        IsReadOnly="True"
+                        Binding="{Binding RoomPacket.FigureColorStr}">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRFigureColor}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        IsReadOnly="True"
+                        Binding="{Binding RoomPacket.TimeOfGameStr}">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRTimeGame}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                    </DataGridTextColumn>
+                    <DataGridTemplateColumn
+                        IsReadOnly="False">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    Text="{DynamicResource MlGRBtnPlay}">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <Button
+                                HorizontalContentAlignment="Center"
+                                HorizontalAlignment="Stretch"
+                                Command="{Binding BeginGameCommand}"
+                                Content="{DynamicResource MlGRBtnPlay}">
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+    </ScrollViewer>
+</UserControl>

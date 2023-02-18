@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="VailderChessDesktop.Resources.AppDesignOrangeFruit">
+    <SolidColorBrush x:Key="RawBackground">#551525</SolidColorBrush>
+    <SolidColorBrush x:Key="PlaceBackground">#752545</SolidColorBrush>
+    <SolidColorBrush x:Key="RawForeground">#EEEEEE</SolidColorBrush>
+    <SolidColorBrush x:Key="PlaceForeground">#DDDDDD</SolidColorBrush>
+</ResourceDictionary>

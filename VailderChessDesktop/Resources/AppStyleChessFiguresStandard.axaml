@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="VailderChessDesktop.Resources.AppStyleChessFiguresStandard">
+    
+    <sys:TimeSpan x:Key="TimeSpanFigureAnimationDuration" xml:space="preserve">0:0:0.1</sys:TimeSpan>
+    <sys:TimeSpan x:Key="TimeSpanFigureInfAnimationDuration" xml:space="preserve">0:0:0.75</sys:TimeSpan>
+    
+    <Thickness x:Key="MarginNoPointerover" xml:space="preserve">6</Thickness>
+    <Thickness x:Key="MarginPointerover" xml:space="preserve">3</Thickness>
+    <Thickness x:Key="MarginPressed" xml:space="preserve">1</Thickness>
+    <Thickness x:Key="MarginFocus" xml:space="preserve">6</Thickness>
+    
+    <SolidColorBrush x:Key="ImgChessFigureEmpty" Color="Indigo"></SolidColorBrush>
+    
+    <ImageBrush x:Key="ImgPlaceToMove" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/PlaceToMove.png">
+    </ImageBrush>
+    
+    <ImageBrush x:Key="ImgPlaceToMoveOnFigure" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/PlaceToMoveOnFigure.png">
+    </ImageBrush>
+    
+    <ImageBrush x:Key="ImgPlaceToMoveOnFriendlyFigure" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/PlaceToMoveOnFriendlyFigure.png">
+    </ImageBrush>
+    
+    <!--#region Black Figures-->
+    <ImageBrush x:Key="ImgRookBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackCastle.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgKnightBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackKnight.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgBishopBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackBishop.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgPawnBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackPawn.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgQueenBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackQueen.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgKingBlack" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/BlackKing.png">
+    </ImageBrush>
+    <!--#endregion-->
+    
+    <!--#region White Figures-->
+    <ImageBrush x:Key="ImgRookWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhiteCastle.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgKnightWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhiteKnight.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgBishopWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhiteBishop.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgPawnWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhitePawn.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgQueenWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhiteQueen.png">
+    </ImageBrush>
+    <ImageBrush x:Key="ImgKingWhite" 
+                BitmapInterpolationMode="HighQuality" 
+                Source="/../Assets/ChessFigures/Type1/WhiteKing.png">
+    </ImageBrush>
+    <!--#endregion-->
+    
+</ResourceDictionary>

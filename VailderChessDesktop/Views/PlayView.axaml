@@ -1,0 +1,91 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:uc="clr-namespace:VailderChessDesktop.UserControls"
+             mc:Ignorable="d"
+             d:DesignWidth="500"
+             d:DesignHeight="400"
+             MaxWidth="500"
+             MaxHeight="220"
+             x:Class="VailderChessDesktop.Views.PlayView">
+
+    <UserControl.Styles>
+        <StyleInclude Source="/../Styles/VailderChessStyle.axaml"></StyleInclude>
+    </UserControl.Styles>
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Border Padding="10"
+            CornerRadius="5"
+            Background="{DynamicResource PlaceBackground}">
+        <Grid
+        ColumnDefinitions="*, 1.8*"
+        RowDefinitions="Auto, Auto, Auto, Auto">
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="{DynamicResource MlGameRoomName}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="{DynamicResource PlaceForeground}">
+        </TextBlock>
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="10"
+            Text="{Binding GameRoomName}"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center">
+        </TextBox>
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="{DynamicResource MlTimeGame}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="{DynamicResource PlaceForeground}">
+        </TextBlock>
+        <TimePicker
+            SelectedTime="{Binding Path=GameRoomTime, Mode=TwoWay}"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center">
+        </TimePicker>
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="{DynamicResource MlFigureColor}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="{DynamicResource PlaceForeground}">
+        </TextBlock>
+        <ComboBox
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="10"
+            HorizontalAlignment="Stretch"
+            SelectedItem="{Binding GameRoomFigureColor}"
+            VerticalAlignment="Center">
+            <ComboBoxItem Content="Чёрный" />
+            <ComboBoxItem Content="Белый" />
+        </ComboBox>
+        <Button
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            Content="{DynamicResource MlBtnCreateGameRoom}"
+            Command="{Binding CreateNewRoom}"
+            Grid.Row="3">
+        </Button>
+    </Grid>
+    </Border>
+    
+</UserControl>

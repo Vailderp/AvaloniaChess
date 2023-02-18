@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="VailderChessDesktop.Resources.AppStyleChessboardBlackberry">
+    <ImageBrush x:Key="ImgChessboardBg" 
+                Source="/../Assets/ChessBoards/blue_chess.png">
+    </ImageBrush>
+</ResourceDictionary>

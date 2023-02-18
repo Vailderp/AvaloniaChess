@@ -1,0 +1,71 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Styles.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </Styles.Resources>
+
+    <!--#region Button.chess_figure-->
+    <Style Selector="Button.chess_figure /template/ ContentPresenter">
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Setter Property="Margin" Value="{DynamicResource MarginNoPointerover}"></Setter>
+    </Style>
+    
+    <Style Selector="Button.chess_figure:pointerover /template/ ContentPresenter">
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Style.Animations>
+            <Animation Duration="{DynamicResource TimeSpanFigureAnimationDuration}"
+                       FillMode="Forward">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginNoPointerover}"></Setter>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginPointerover}"></Setter>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="Button.chess_figure:pressed /template/ ContentPresenter">
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Style.Animations>
+            <Animation Duration="{DynamicResource TimeSpanFigureAnimationDuration}"
+                       FillMode="Forward">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginPointerover}"></Setter>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginPressed}"></Setter>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
+    <Style Selector="Button.chess_figure:focus /template/ ContentPresenter">
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Setter Property="Margin" Value="{DynamicResource MarginFocus}"></Setter>
+        <Style.Animations>
+            <Animation Duration="{DynamicResource TimeSpanFigureInfAnimationDuration}" 
+                       FillMode="Backward" IterationCount="INFINITE">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginPressed}"></Setter>
+                </KeyFrame>
+                <KeyFrame Cue="50%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginFocus}"></Setter>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Margin" Value="{DynamicResource MarginPressed}"></Setter>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+        
+</Styles>

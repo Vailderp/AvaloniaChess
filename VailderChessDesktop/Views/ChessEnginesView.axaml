@@ -1,0 +1,183 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:userControls="clr-namespace:VailderChessDesktop.UserControls"
+             xmlns:viewModels="clr-namespace:VailderChessDesktop.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             Background="{DynamicResource RawBackground}"
+             x:Class="VailderChessDesktop.Views.ChessEnginesView">
+
+    <UserControl.Styles>
+        <StyleInclude 
+            Source="/../Styles/VailderChessStyle.axaml">
+        </StyleInclude>
+    </UserControl.Styles>
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid ColumnDefinitions="256, *, 192">
+        <Grid Grid.Column="1">
+            <Viewbox
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <userControls:ChessBoardUserControl x:Name="MainChessBoard" />
+            </Viewbox>
+        </Grid>
+        <StackPanel
+            Grid.Column="0"
+            Background="{DynamicResource PlaceBackground}">
+            
+            <Border
+                Padding="5"
+                HorizontalAlignment="Center"
+                CornerRadius="0, 0, 10, 10"
+                Background="{DynamicResource RawBackground}">
+                <TextBlock
+                    Foreground="{DynamicResource PlaceForeground}"
+                    Text="{DynamicResource MlChessEnginesSettings}"
+                    HorizontalAlignment="Center"
+                    FontSize="16">
+                </TextBlock>
+            </Border>
+
+            <TextBlock
+                Padding="0, 15, 0, 2.5"
+                Foreground="{DynamicResource PlaceForeground}"
+                Text="{DynamicResource MlSearchDepth}"
+                HorizontalAlignment="Center"
+                FontSize="15">
+            </TextBlock>
+
+            <NumericUpDown
+                Margin="5"
+                Height="30"
+                Minimum="1"
+                Value="{Binding DepthSearch}"
+                Maximum="128"
+                HorizontalAlignment="Stretch"
+                Background="#202040"
+                VerticalAlignment="Top">
+            </NumericUpDown>
+
+            <TextBlock
+                Padding="0, 7.5, 0, 2.5"
+                Foreground="{DynamicResource PlaceForeground}"
+                Text="{DynamicResource MlNodesCounts}"
+                HorizontalAlignment="Center"
+                FontSize="15">
+            </TextBlock>
+
+            <NumericUpDown
+                Margin="5"
+                Height="30"
+                Minimum="1"
+                Value="{Binding NodesCount}"
+                Maximum="999999999999"
+                HorizontalAlignment="Stretch"
+                Background="#202040"
+                VerticalAlignment="Top">
+            </NumericUpDown>
+            
+            <Button
+                Margin="5, 7.5, 5, 5"
+                HorizontalAlignment="Stretch"
+                FontSize="15"
+                HorizontalContentAlignment="Center"
+                Content="{DynamicResource MlBestmove}"
+                Command="{Binding BestMove}"
+                Classes="place">
+            </Button>
+
+            <Button
+                Margin="5, 7.5, 5, 5"
+                HorizontalAlignment="Stretch"
+                FontSize="15"
+                HorizontalContentAlignment="Center"
+                Content="{DynamicResource MlStopComputeBestMove}"
+                Command="{Binding StopEngine}"
+                Classes="place">
+            </Button>
+
+            <Button
+                Margin="5, 7.5, 5, 5"
+                HorizontalAlignment="Stretch"
+                FontSize="15"
+                HorizontalContentAlignment="Center"
+                Content="{DynamicResource MlLeaveGameCEV}"
+                Command="{Binding QuitEngine}"
+                Classes="place">
+            </Button>
+            
+            <Button
+                Margin="5, 7.5, 5, 5"
+                HorizontalAlignment="Stretch"
+                FontSize="15"
+                HorizontalContentAlignment="Center"
+                Content="{DynamicResource MlConsole}"
+                Command="{Binding OpenProtocolWindow}"
+                Classes="place">
+            </Button>
+            
+        </StackPanel>
+        <Grid 
+            RowDefinitions="Auto, *"
+            Grid.Column="2"
+            Background="{DynamicResource PlaceBackground}">
+            <Border
+                Padding="5"
+                HorizontalAlignment="Center"
+                CornerRadius="0, 0, 10, 10"
+                Background="{DynamicResource RawBackground}">
+                <TextBlock
+                    Foreground="{DynamicResource PlaceForeground}"
+                    Text="{DynamicResource MlPositionSettings}"
+                    HorizontalAlignment="Center"
+                    FontSize="16">
+                </TextBlock>
+            </Border>
+            <Grid 
+                Grid.Row="1" 
+                ColumnDefinitions="*" 
+                RowDefinitions="*">
+                <Grid.Styles>
+                    <Style Selector="TextBlock">
+                        <Setter 
+                            Property="HorizontalAlignment" 
+                            Value="Center">
+                        </Setter>
+                    </Style>
+                </Grid.Styles>
+                <StackPanel>
+                    <TextBlock
+                        Margin="0, 10, 0, 0"
+                        Foreground="{DynamicResource PlaceForeground}"
+                        TextWrapping="Wrap"
+                        TextAlignment="Center"
+                        Text="{DynamicResource MlPositionFSH}">
+                    </TextBlock>
+                    <TextBox
+                        Margin="5, 10, 5, 0"
+                        Height="125"
+                        TextWrapping="Wrap"
+                        HorizontalAlignment="Stretch">
+                    </TextBox>
+                    <Button
+                        Classes="place"
+                        Margin="5, 10, 5, 0"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"
+                        Content="{DynamicResource MlSetUpPositionFSH}">
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

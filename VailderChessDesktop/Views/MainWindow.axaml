@@ -1,0 +1,104 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:VailderChessDesktop.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userControls="clr-namespace:VailderChessDesktop.UserControls"
+        xmlns:rxui="http://reactiveui.net"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Background="{DynamicResource RawBackground}"
+        x:Class="VailderChessDesktop.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="VailderChessDesktop">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Window.Styles>
+        <StyleInclude
+            Source="/../Styles/VailderChessStyle.axaml">
+        </StyleInclude>
+    </Window.Styles>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid RowDefinitions="32, *">
+
+        <Grid
+            ColumnDefinitions="Auto, *"
+            Classes="place">
+            <DockPanel
+                Grid.Column="0">
+                <Button
+                    Classes="menu"
+                    Content="VailderChess"
+                    VerticalAlignment="Center"
+                    Command="{Binding Play}">
+                </Button>
+
+                <Button
+                    Content="{DynamicResource MlMenuPlay}"
+                    VerticalAlignment="Center"
+                    Command="{Binding Play}"
+                    Classes="menu">
+                </Button>
+
+                <Button
+                    Content="{DynamicResource MlWaitingRoom}"
+                    VerticalAlignment="Center"
+                    Command="{Binding WaitingRoom}"
+                    Classes="menu">
+                </Button>
+
+                <Button
+                    Content="{DynamicResource MlMenuEngines}"
+                    VerticalAlignment="Center"
+                    Command="{Binding Engines}"
+                    Classes="menu">
+                </Button>
+
+                <Button
+                    Content="{DynamicResource MlMenuSettings}"
+                    VerticalAlignment="Center"
+                    Command="{Binding Settings}"
+                    Classes="menu">
+                </Button>
+
+            </DockPanel>
+
+            <Button
+                Grid.Column="1"
+                Content="{DynamicResource MlMenuLogin}"
+                VerticalAlignment="Top"
+                Command="{Binding ConnectToServer}"
+                Classes="menu"
+                HorizontalAlignment="Right">
+            </Button>
+            
+            
+        </Grid>
+
+        <!-- <TextBlock  -->
+        <!--     Grid.Row="1"  -->
+        <!--     Text="{Binding Greeting}"  -->
+        <!--     HorizontalAlignment="Center" VerticalAlignment="Center" -->
+        <!--     /> -->
+
+
+        <rxui:RoutedViewHost
+            Grid.Row="1"
+            Router="{Binding Router}">
+            <rxui:RoutedViewHost.DefaultContent>
+                <TextBlock Text="Default Content" />
+            </rxui:RoutedViewHost.DefaultContent>
+        </rxui:RoutedViewHost>
+
+    </Grid>
+</Window>

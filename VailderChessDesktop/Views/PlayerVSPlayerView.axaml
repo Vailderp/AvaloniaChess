@@ -1,0 +1,112 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:userControls="clr-namespace:VailderChessDesktop.UserControls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="VailderChessDesktop.Views.PlayerVSPlayerView">
+
+    <UserControl.Styles>
+        <StyleInclude
+            Source="/../Styles/VailderChessStyle.axaml">
+        </StyleInclude>
+    </UserControl.Styles>
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        ColumnDefinitions="200, *">
+        <Grid
+            RowDefinitions="*, *, *, *, *, *, *, *, *, *"
+            Background="{DynamicResource PlaceBackground}">
+
+            <TextBlock Grid.Row="0"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="{Binding Player2Name}">
+            </TextBlock>
+
+            <Grid
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1">
+                <DockPanel>
+                    <TextBlock
+                        FontSize="20"
+                        Text="{Binding Player2TimeHours}">
+                    </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text=":">
+                    </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text="{Binding Player2TimeMinutes}">
+                    </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text=":">
+                    </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text="{Binding Player2TimeSeconds}">
+                    </TextBlock>
+                </DockPanel>
+            </Grid>
+
+            <Grid
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="8">
+                <DockPanel>
+                <TextBlock
+                    FontSize="20"
+                    Text="{Binding Player1TimeHours}">
+                </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text=":">
+                    </TextBlock>
+                <TextBlock
+                    FontSize="20"
+                    Text="{Binding Player1TimeMinutes}">
+                </TextBlock>
+                    <TextBlock
+                        FontSize="20"
+                        Text=":">
+                    </TextBlock>
+                <TextBlock
+                    FontSize="20"
+                    Text="{Binding Player1TimeSeconds}">
+                </TextBlock>
+                </DockPanel>
+            </Grid>
+
+            <TextBlock Grid.Row="9"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="{Binding Player1Name}">
+            </TextBlock>
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Viewbox>
+                <userControls:ChessBoardUserControl
+                    x:Name="MainChessBoard"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                </userControls:ChessBoardUserControl>
+            </Viewbox>
+        </Grid>
+
+    </Grid>
+</UserControl>

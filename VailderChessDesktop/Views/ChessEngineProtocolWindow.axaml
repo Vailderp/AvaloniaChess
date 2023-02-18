@@ -1,0 +1,47 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:VailderChessDesktop.ViewModels"
+        mc:Ignorable="d" 
+        d:DesignWidth="800" 
+        d:DesignHeight="450"
+        x:Class="VailderChessDesktop.Views.ChessEngineProtocolWindow"
+        Title="ChessEngineProtocolWindow">
+    
+    <Design.DataContext>
+        <viewModels:ChessEngineProtocolWindowViewModel/>
+    </Design.DataContext>
+    
+    <Grid RowDefinitions="*, Auto">
+        <ScrollViewer>
+            <StackPanel x:Name="MainPanel">
+                <!-- <TextBlock -->
+                <!--     Text="=>isready" -->
+                <!--     TextWrapping="Wrap" -->
+                <!--     Margin="2"> -->
+                <!-- </TextBlock> -->
+                <!-- <TextBlock -->
+                <!--     TextWrapping="Wrap" -->
+                <!--     Text="->readyok" Margin="2"> -->
+                <!-- </TextBlock> -->
+            </StackPanel>
+        </ScrollViewer>
+        <Grid 
+            Grid.Row="1" 
+            ColumnDefinitions="*, Auto">
+            <TextBox 
+                Margin="10, 0, 0, 10"
+                Text="{Binding CommandLineText}"
+                FontSize="16">
+            </TextBox>
+            <Button
+                Grid.Column="1"
+                FontSize="16"
+                Margin="10, 0, 10, 11"
+                Command="{Binding EmitCommandLine}"
+                Content="{DynamicResource MlSend}">
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

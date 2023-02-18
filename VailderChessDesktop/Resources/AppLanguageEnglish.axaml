@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                    x:Class="VailderChessDesktop.Resources.AppLanguageEnglish">
+    
+    <!--#region menu-->
+    <system:String x:Key="MlMenuPlay" xml:space="preserve">CreateGame</system:String>
+    <system:String x:Key="MlWaitingRoom" xml:space="preserve">WaitingRoom</system:String>
+    <system:String x:Key="MlMenuEngines" xml:space="preserve">ChessEngines</system:String>
+    <system:String x:Key="MlMenuSettings" xml:space="preserve">Settings</system:String>
+    <system:String x:Key="MlMenuLogin" xml:space="preserve">Connect to server</system:String>
+    <!--#endregion-->
+    
+    <!--#region PlayView-->
+    <system:String x:Key="MlGameRoomName" xml:space="preserve">Room name</system:String>
+    <system:String x:Key="MlTimeGame" xml:space="preserve">Game duration</system:String>
+    <system:String x:Key="MlFigureColor" xml:space="preserve">Figures color</system:String>
+    <system:String x:Key="MlBtnCreateGameRoom" xml:space="preserve">Create new game room</system:String>
+    <!--#endregion-->
+    
+    <!--#region GameRooms-->
+    <system:String x:Key="MlGRRoom" xml:space="preserve">Room</system:String>
+    <system:String x:Key="MlGRCreator" xml:space="preserve">Creator</system:String>
+    <system:String x:Key="MlGRRival" xml:space="preserve">Rival</system:String>
+    <system:String x:Key="MlGRFigureColor" xml:space="preserve">Rival's figures color</system:String>
+    <system:String x:Key="MlGRTimeGame" xml:space="preserve">Game duration</system:String>
+    <system:String x:Key="MlGRBtnPlay" xml:space="preserve">Play</system:String>
+    <!--#endregion-->
+    
+    <!--#region ConnectToServer-->
+    <system:String x:Key="MlCServerAddr" xml:space="preserve">Nickname</system:String>
+    <system:String x:Key="MlCPlayerName" xml:space="preserve">Server address</system:String>
+    <system:String x:Key="MlCBtnConnect" xml:space="preserve">Connect</system:String>
+    <!--#endregion-->
+    
+    <!--#region ChessEnginesView-->
+    <system:String x:Key="MlChessEnginesSettings" xml:space="preserve">Nickname</system:String>
+    <system:String x:Key="MlSearchDepth" xml:space="preserve">Search depth</system:String>
+    <system:String x:Key="MlNodesCounts" xml:space="preserve">nodes count</system:String>
+    <system:String x:Key="MlBestmove" xml:space="preserve">Best move</system:String>
+    <system:String x:Key="MlStopComputeBestMove" xml:space="preserve">Stop computing best move</system:String>
+    <system:String x:Key="MlLeaveGameCEV" xml:space="preserve">Quit the game</system:String>
+    <system:String x:Key="MlConsole" xml:space="preserve">Console</system:String>
+    <system:String x:Key="MlPositionSettings" xml:space="preserve">Position settings</system:String>
+    <system:String x:Key="MlPositionFSH" xml:space="preserve">Position in move list format</system:String>
+    <system:String x:Key="MlSetUpPositionFSH" xml:space="preserve">Set up position</system:String>
+    <system:String x:Key="MlSend" xml:space="preserve">Send</system:String>
+    <!--#endregion-->
+    
+    <!--#region ChessEnginesListView-->
+    <system:String x:Key="MlFileName" xml:space="preserve">Engine file name</system:String>
+    <system:String x:Key="MlPlayCELV" xml:space="preserve">Play</system:String>
+    <system:String x:Key="MlBtnAddChessEngine" xml:space="preserve">Add a chess engine</system:String>
+    <!--#endregion-->
+    
+    
+    <!--#region SettingsView-->
+    <system:String x:Key="MlChangeAppLanguage" xml:space="preserve">App's language</system:String>
+    <system:String x:Key="MlChangeAppDesign" xml:space="preserve">Color style</system:String>
+    <system:String x:Key="MlChangeAppChessDesign" xml:space="preserve">Chess figures style</system:String>
+    <system:String x:Key="MlChangeAppChessboardDesign" xml:space="preserve">Chessboard style</system:String>
+    <!--#endregion-->
+    
+</ResourceDictionary>

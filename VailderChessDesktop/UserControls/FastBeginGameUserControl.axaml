@@ -1,0 +1,232 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             d:DesignWidth="450" 
+             d:DesignHeight="350" 
+             MaxHeight="350" 
+             MinHeight="350"
+             x:Class="VailderChessDesktop.UserControls.FastBeginGameUserControl">
+
+    <UserControl.Styles>
+        <StyleInclude 
+                Source="/../Styles/VailderChessStyle.axaml">
+        </StyleInclude>
+    </UserControl.Styles>
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude 
+                        Source="/../Resources/AppLanguageRussian.axaml">
+                </ResourceInclude>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Classes="place" 
+          RowDefinitions="Auto,Auto,*,*,*" 
+          ColumnDefinitions="*,*,*,*">
+            <Border 
+                Grid.Column="0" 
+                Grid.ColumnSpan="4" 
+                Grid.Row="0" 
+                Background="{DynamicResource RawBackground}"
+                Padding="7.5" 
+                HorizontalAlignment="Center" 
+                CornerRadius="0, 0, 10, 10">
+            <TextBlock 
+                Text="{DynamicResource MlFastBeginGameHeader}"
+                FontSize="15"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource RawForeground}">
+            </TextBlock>
+        </Border>
+
+        <TextBlock 
+                Grid.Column="0" 
+                Grid.Row="1" 
+                Text="{DynamicResource MlFastBeginGameFast}" 
+                FontSize="14"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource PlaceForeground}"
+                Margin="5">
+        </TextBlock>
+        <TextBlock 
+                Grid.Column="1" 
+                Grid.Row="1" 
+                Text="{DynamicResource MlFastBeginGameBlitz}" 
+                FontSize="14"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="{DynamicResource PlaceForeground}"
+                Margin="5">
+        </TextBlock>
+        <TextBlock 
+                Grid.Column="2" 
+                Grid.Row="1" 
+                Text="{DynamicResource MlFastBeginGameRapid}" 
+                FontSize="14"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="{DynamicResource PlaceForeground}" 
+                Margin="5">
+        </TextBlock>
+        <TextBlock 
+                Grid.Column="3" 
+                Grid.Row="1" 
+                Text="{DynamicResource MlFastBeginGameClassic}" 
+                FontSize="14"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="{DynamicResource PlaceForeground}" 
+                Margin="5">
+        </TextBlock>
+
+        <Button 
+                Grid.Column="0" 
+                Grid.Row="2" 
+                Content="1+0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15" Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="1" 
+                Grid.Row="2" 
+                Content="3+2"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="2" 
+                Grid.Row="2" 
+                Content="10+0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="3"
+                Grid.Row="2" 
+                Content="30+0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15"
+                Margin="3.5, 0, 3.5, 3.5"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+        </Button>
+
+        <Button 
+                Grid.Column="0" 
+                Grid.Row="3" 
+                Content="2+1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="1" 
+                Grid.Row="3"
+                Content="5+0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="2"
+                Grid.Row="3"
+                Content="5+3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="3" 
+                Grid.Row="3" 
+                Content="30+20"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 3.5, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+
+        <Button 
+                Grid.Column="0"
+                Grid.Row="4"
+                Content="3+0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="1" 
+                Grid.Row="4" 
+                Content="5+3"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Classes="place" 
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="2" 
+                Grid.Row="4" 
+                Content="15+5"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15" 
+                Margin="3.5, 0, 0, 3.5"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+        </Button>
+        <Button 
+                Grid.Column="3" 
+                Grid.Row="4"
+                Content="45+0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Classes="place"
+                FontSize="15" 
+                Margin="3.5, 0, 3.5, 3.5"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center">
+        </Button>
+    </Grid>
+</UserControl>

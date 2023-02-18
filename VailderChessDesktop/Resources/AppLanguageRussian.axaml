@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                    x:Class="VailderChessDesktop.Resources.AppLanguageRussian">
+    
+    <!--#region menu-->
+    <system:String x:Key="MlMenuPlay" xml:space="preserve">Создать игру</system:String>
+    <system:String x:Key="MlWaitingRoom" xml:space="preserve">Зал ожидания</system:String>
+    <system:String x:Key="MlMenuEngines" xml:space="preserve">Шахматные движки</system:String>
+    <system:String x:Key="MlMenuSettings" xml:space="preserve">Настройки</system:String>
+    <system:String x:Key="MlMenuLogin" xml:space="preserve">Подключиться к серверу</system:String>
+    <!--#endregion-->
+    
+    <!--#region PlayView-->
+    <system:String x:Key="MlGameRoomName" xml:space="preserve">Название комнаты</system:String>
+    <system:String x:Key="MlTimeGame" xml:space="preserve">Длительность игры</system:String>
+    <system:String x:Key="MlFigureColor" xml:space="preserve">Цвет фигур</system:String>
+    <system:String x:Key="MlBtnCreateGameRoom" xml:space="preserve">Создать новую игровую комнату</system:String>
+    <!--#endregion-->
+    
+    <!--#region GameRooms-->
+    <system:String x:Key="MlGRRoom" xml:space="preserve">Комната</system:String>
+    <system:String x:Key="MlGRCreator" xml:space="preserve">Создатель</system:String>
+    <system:String x:Key="MlGRRival" xml:space="preserve">Противник</system:String>
+    <system:String x:Key="MlGRFigureColor" xml:space="preserve">Цвет фигур противника</system:String>
+    <system:String x:Key="MlGRTimeGame" xml:space="preserve">Время игры</system:String>
+    <system:String x:Key="MlGRBtnPlay" xml:space="preserve">Играть</system:String>
+    <!--#endregion-->
+    
+    <!--#region ConnectToServer-->
+    <system:String x:Key="MlCServerAddr" xml:space="preserve">Имя игрока</system:String>
+    <system:String x:Key="MlCPlayerName" xml:space="preserve">Адрес сервера</system:String>
+    <system:String x:Key="MlCBtnConnect" xml:space="preserve">Подкючиться</system:String>
+    <!--#endregion-->
+    
+    <!--#region ChessEnginesView-->
+    <system:String x:Key="MlChessEnginesSettings" xml:space="preserve">Имя игрока</system:String>
+    <system:String x:Key="MlSearchDepth" xml:space="preserve">Глубина поиска</system:String>
+    <system:String x:Key="MlNodesCounts" xml:space="preserve">Количество узлов</system:String>
+    <system:String x:Key="MlBestmove" xml:space="preserve">Лучший ход</system:String>
+    <system:String x:Key="MlStopComputeBestMove" xml:space="preserve">Остановить вычисления хода</system:String>
+    <system:String x:Key="MlLeaveGameCEV" xml:space="preserve">Покинуть игру</system:String>
+    <system:String x:Key="MlConsole" xml:space="preserve">Консоль</system:String>
+    <system:String x:Key="MlPositionSettings" xml:space="preserve">Настройка позиции</system:String>
+    <system:String x:Key="MlPositionFSH" xml:space="preserve">Позиция в формате списка ходов</system:String>
+    <system:String x:Key="MlSetUpPositionFSH" xml:space="preserve">Установить позицию</system:String>
+    <system:String x:Key="MlSend" xml:space="preserve">Отправить</system:String>
+    <!--#endregion-->
+    
+    <!--#region ChessEnginesListView-->
+    <system:String x:Key="MlFileName" xml:space="preserve">Название файла движка</system:String>
+    <system:String x:Key="MlPlayCELV" xml:space="preserve">Играть</system:String>
+    <system:String x:Key="MlBtnAddChessEngine" xml:space="preserve">Добавить шахматный движок</system:String>
+    <!--#endregion-->
+    
+    <!--#region SettingsView-->
+    <system:String x:Key="MlChangeAppLanguage" xml:space="preserve">Язык приложения</system:String>
+    <system:String x:Key="MlChangeAppDesign" xml:space="preserve">Цветовой стиль</system:String>
+    <system:String x:Key="MlChangeAppChessDesign" xml:space="preserve">Стиль шахматных фигур</system:String>
+    <system:String x:Key="MlChangeAppChessboardDesign" xml:space="preserve">Стиль шахматной доски</system:String>
+    <!--#endregion-->
+    
+</ResourceDictionary>

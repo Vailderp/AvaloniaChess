@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:userControls="clr-namespace:VailderChessDesktop.UserControls">
+    <Design.PreviewWith>
+        <Button 
+            Padding="100"
+            Flyout="{DynamicResource FlyoutFastBeginGame}"
+            Content="Play">
+            
+        </Button>
+    </Design.PreviewWith>
+    <Flyout x:Key="FlyoutFastBeginGame">
+        <Grid 
+            ColumnDefinitions="*, *" 
+            RowDefinitions="*">
+            <userControls:ChessFigure 
+                FigureType="KingBlack" 
+                Width="64" 
+                Height="64">
+                
+            </userControls:ChessFigure>
+            
+        </Grid>
+    </Flyout>
+</ResourceDictionary>

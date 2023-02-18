@@ -1,0 +1,38 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:VailderChessDesktop.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignWidth="64"
+             d:DesignHeight="64"
+             HorizontalAlignment="Stretch" 
+             VerticalAlignment="Stretch"
+             x:Class="VailderChessDesktop.UserControls.ChessFigure">
+    
+    <Design.DataContext>
+        <viewModels:ChessFigureViewModel/>
+    </Design.DataContext>
+    
+    <UserControl.Styles>
+        <StyleInclude 
+            Source="/../Styles/ChessFiguresStyle.axaml">
+        </StyleInclude>
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter 
+                Property="Background"
+                Value="{Binding ImgLocalChessFigure}">
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+    
+    <Button
+        Name="ChessFigureButton"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Classes="chess_figure"
+        Background="{Binding ImgLocalChessFigure}"
+        CornerRadius="0">
+    </Button>
+    
+</UserControl>

@@ -1,0 +1,67 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style Selector="Grid.place">
+        <Setter Property="Background" Value="{DynamicResource PlaceBackground}"></Setter>
+    </Style>
+    
+    <!--#region Button.raw-->
+    
+    <Style Selector="Button.raw ContentPresenter">
+        <Setter Property="Background" Value="#252545"></Setter>
+        <Setter Property="Button.Foreground" Value="#EEEEEE"></Setter>
+    </Style>
+    
+    <Style Selector="Button.raw:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#202040"></Setter>
+        <Setter Property="Button.Foreground" Value="#DDDDDD"></Setter>
+    </Style>
+    
+    <Style Selector="Button.raw:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#222235"></Setter>
+        <Setter Property="Button.Foreground" Value="#CCCCCC"></Setter>
+    </Style>
+    
+    <!--#endregion-->
+    
+    <!--#region Button.menu-->
+    
+    <Style Selector="Button.menu ContentPresenter">
+        <Setter Property="Background" Value="#00000000"></Setter>
+        <Setter Property="Button.Foreground" Value="#EEEEEE"></Setter>
+    </Style>
+    
+    <Style Selector="Button.menu:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#00000000"></Setter>
+        <Setter Property="Button.Foreground" Value="#CCCCCC"></Setter>
+        <Setter Property="Button.FontSize" Value="15"></Setter>
+    </Style>
+    
+    <Style Selector="Button.menu:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#00000000"></Setter>
+        <Setter Property="Button.Foreground" Value="#AAAAAA"></Setter>
+    </Style>
+    
+    <!--#endregion-->
+    
+    <!--#region Button.place-->
+    
+    <Style Selector="Button.place ContentPresenter">
+        <Setter Property="Background" Value="#353555"></Setter>
+        <Setter Property="Button.Foreground" Value="#EEEEEE"></Setter>
+    </Style>
+    
+    <Style Selector="Button.place:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#303050"></Setter>
+        <Setter Property="Button.Foreground" Value="#DDDDDD"></Setter>
+    </Style>
+    
+    <Style Selector="Button.place:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#202035"></Setter>
+        <Setter Property="Button.Foreground" Value="#CCCCCC"></Setter>
+    </Style>
+    
+    <!--#endregion-->
+    
+    
+</Styles>
